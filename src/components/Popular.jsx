@@ -5,16 +5,14 @@ import '@splidejs/splide/dist/css/splide.min.css'
 
 
 function Popular() {
-
   const [popular, setPopular] = useState([])
-
   useEffect(() => {
     getPopular()
   },[])
 
   const getPopular = async () => {
-
     const check = localStorage.getItem('popular')
+
     if(check){
       setPopular(JSON.parse(check))
     } else {
@@ -93,6 +91,7 @@ const Gradient = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+  border-radius: 2rem;
 `
 
 export default Popular
