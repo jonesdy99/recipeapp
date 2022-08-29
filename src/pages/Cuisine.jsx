@@ -1,4 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 function Cuisine() {
   return (
