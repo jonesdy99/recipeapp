@@ -15,7 +15,7 @@ function Recipe() {
     const detailData = await data.json()
     setDetails(detailData)
   }
-
+  
   useEffect(() => {
     fetchDetails()
   },[params.name])
@@ -27,8 +27,21 @@ function Recipe() {
         <img src={details.image} alt="" />
       </div>
       <Info>
-        <Button>Instructions</Button>
-        <Button>Ingredients</Button>
+        <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>Instructions</Button>
+        <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
+        {activeTab === 'instructions' && (
+        <div>
+          <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+          <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+        </div>
+        )}
+        {activeTab === 'ingredients' && (
+        <ul>
+          {details.extendedIngredients?.map((ingredient) => (
+            <li key={ingredient.id}>{ingredient.original}</li>
+          ))}
+        </ul>
+        )}
       </Info>
     </DetailWrapper>
   )
@@ -59,12 +72,12 @@ const Button = styled.button`
   color: #313131;
   background: white;
   border: 2px solid black;
-  margin- right: 2rem;
+  margin-right: 2rem;
   font-weight: 600;
 `
 
 const Info = styled.div`
-  margin-left: 10rem;
+  margin-left: 5rem;
 `
 
 export default Recipe
