@@ -30,7 +30,6 @@ function Popular() {
           <h3>Popular Dishes</h3>
           <Splide options={{
             perPage: 4,
-            arrows: false,
             pagination: false,
             drag: 'free',
             gap: '5rem',
