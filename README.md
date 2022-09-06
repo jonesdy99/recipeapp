@@ -1,5 +1,5 @@
-# Recipe Galore
-<p>Recipe Galore is a simple application built in React that demostrates concepts such as the Spoonacular API. Users have the option to choose from a variety of cusine types. Such as American, Italian, Thai, and Korean. Users can alos search for any recipes they might like and look at a popular page. This app also shows users intructions and ingredient amounts for each individual recipe. </p>
+# React Recipes
+<p>React Recipes is a simple application built in React that demostrates concepts such as the Spoonacular API. Users have the option to choose from a variety of cusine types. Such as American, Italian, Thai, and Korean. Users can alos search for any recipes they might like and look at a popular page. This app also shows users intructions and ingredient amounts for each individual recipe. </p>
 
 
 ## Technologies Used: 
