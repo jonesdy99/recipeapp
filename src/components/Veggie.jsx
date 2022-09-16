@@ -13,7 +13,7 @@ function Veggie() {
   },[])
 
   const getVeggie = async () => {
-    const check = localStorage.getItem('veggie')
+    const check = localStorage.getItem('veggie') 
 
     if(check){
       setVeggie(JSON.parse(check))
